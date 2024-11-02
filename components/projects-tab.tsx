@@ -8,9 +8,18 @@ import cn from '@/utils/cn';
 import Link from 'next/link';
 import { MdArrowOutward } from 'react-icons/md';
 import Gallery from '@/components/gallery';
+import type { StaticImageData } from 'next/image';
+
+type ProjectDataType = {
+  name: string;
+  link?: string;
+  description: string;
+  images?: StaticImageData[];
+  isSideProject?: boolean;
+};
 
 export default function ProjectsTab() {
-  const data = [
+  const data: ProjectDataType[] = [
     {
       name: 'discord.place',
       link: 'https://discord.place',
@@ -55,7 +64,7 @@ export default function ProjectsTab() {
                 className={cn(
                   item.link && 'text-pretty hover:underline underline-offset-4'
                 )}
-                href={item.link}
+                href={item.link || '#'}
                 target='_blank'
               >
                 {item.name}
@@ -74,7 +83,7 @@ export default function ProjectsTab() {
               {item.description}
             </p>
 
-            {item.images?.length > 0 && (
+            {item.images?.length && (
               <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex'>
                 <Gallery images={item.images} />
               </div>

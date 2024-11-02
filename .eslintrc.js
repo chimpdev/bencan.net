@@ -11,9 +11,12 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'next',
     'plugin:tailwindcss/recommended',
-    'plugin:security/recommended-legacy'
+    'plugin:security/recommended-legacy',
+    'plugin:@typescript-eslint/recommended'
   ],
-  plugins: ['react'],
+  plugins: ['react', '@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
+  root: true,
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'

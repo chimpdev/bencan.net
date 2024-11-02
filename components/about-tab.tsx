@@ -1,10 +1,16 @@
 import Link from 'next/link';
 import { MdArrowOutward } from 'react-icons/md';
 
+type ContactDataType = {
+  label: string;
+  href: string;
+  text: string;
+};
+
 export default function AboutTab() {
   const aboutText = 'I’m a 19-year-old high school student and freelancer, passionate about software development and always eager to learn. I dive into various projects, from building efficient Discord bots to exploring web development with Next.js and React.\n\nI’m meticulous about my workflow, using GitHub Actions for automation, optimizing APIs, and implementing caching and validation systems. I like building projects that are useful, like my Discord resource hub and personal portfolio.\n\nI enjoy adding a bit of irony and teasing to keep things fun. Overall, I’m driven by curiosity, continuous improvement, and a love for creating.';
 
-  const contacts = [
+  const contacts: ContactDataType[] = [
     {
       label: 'Instagram',
       href: 'https://www.instagram.com/gokhanknows',

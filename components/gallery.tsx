@@ -1,8 +1,12 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
-export default function Gallery({ images }) {
+type GalleryProps = {
+  images: StaticImageData[];
+};
+
+export default function Gallery({ images }: GalleryProps) {
   return images.map((image, index) => (
     <Zoom
       key={index}

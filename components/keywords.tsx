@@ -3,11 +3,20 @@
 import { SiMongodb, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { useMedia } from 'react-use';
 import Tooltip from '@/components/tooltip';
+import type { IconType } from 'react-icons';
+
+type KeywordDataType = {
+  label: string;
+  icon: IconType;
+  tooltip: string;
+  color: string;
+};
 
 export default function Page() {
+  // @ts-expect-error - useMedia only accepts boolean | undefined as the default value
   const isDarkMode = useMedia('(prefers-color-scheme: dark)', 'loading');
 
-  const keywords = [
+  const keywords: KeywordDataType[] = [
     {
       label: 'Next.js',
       icon: SiNextdotjs,
@@ -40,6 +49,7 @@ export default function Page() {
     }
   ];
 
+  // @ts-expect-error - isDarkMode can be 'loading' as well
   const isLoading = isDarkMode === 'loading';
 
   return (

@@ -1,9 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+export default {
   content: [
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}'
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}'
   ],
   darkMode: 'media',
   theme: {
@@ -60,4 +60,4 @@ module.exports = {
   future: {
     hoverOnlyWhenSupported: true
   }
-};
+} satisfies Config;
