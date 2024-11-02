@@ -31,7 +31,7 @@ export default function Tooltip({ children, content, side, sideOffset, hide }) {
         {content && (
           <RadixTooltip.Portal>
             <RadixTooltip.Content
-              className='z-10 max-w-[calc(100%_-_10px)] rounded-lg sm:rounded-full bg-black p-2 sm:px-2 sm:py-1 text-center text-xs font-semibold text-white [transform-origin:var(--radix-tooltip-content-transform-origin)] sm:max-w-[unset] dark:bg-white dark:text-black'
+              className='z-10 max-w-[calc(100%_-_10px)] rounded-lg bg-black p-2 text-center text-xs font-semibold text-white [transform-origin:var(--radix-tooltip-content-transform-origin)] sm:max-w-[unset] sm:rounded-full sm:px-2 sm:py-1 dark:bg-white dark:text-black'
               sideOffset={sideOffset || 5}
               side={side || 'top'}
             >

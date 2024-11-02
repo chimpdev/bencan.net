@@ -70,12 +70,12 @@ export default function ProjectsTab() {
               )}
             </div>
 
-            <p className='whitespace-pre-wrap sm:text-justify text-tertiary'>
+            <p className='whitespace-pre-wrap text-tertiary sm:text-justify'>
               {item.description}
             </p>
 
             {item.images?.length > 0 && (
-              <div className='mt-4 grid grid-cols-1 sm:grid-cols-2 lg:flex gap-4'>
+              <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex'>
                 <Gallery images={item.images} />
               </div>
             )}

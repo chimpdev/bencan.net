@@ -43,7 +43,7 @@ export default function Page() {
   const isLoading = isDarkMode === 'loading';
 
   return (
-    <div className='mt-4 grid grid-cols-2 mobile:grid-cols-3 sm:flex flex-wrap gap-2'>
+    <div className='mt-4 grid grid-cols-2 flex-wrap gap-2 mobile:grid-cols-3 sm:flex'>
       {isLoading ? (
         new Array(keywords.length).fill(null).map((_, index) => (
           <div

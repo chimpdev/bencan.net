@@ -70,7 +70,7 @@ export default function WorkTab() {
                 </div>
               </div>
 
-              <p className='sm:text-justify text-tertiary'>
+              <p className='text-tertiary sm:text-justify'>
                 {item.description}
               </p>
 
