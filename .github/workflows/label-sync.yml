@@ -20,4 +20,4 @@ jobs:
       - name: Label sync
         uses: crazy-max/ghaction-github-labeler@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
