@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/chimpdev/bencan.net/compare/v1.0.1...v1.0.2) (2024-11-02)
+
+
+### Bug Fixes
+
+* **actions:** remove project input from setup-node-env action ([8689b96](https://github.com/chimpdev/bencan.net/commit/8689b966c082338139e49cfcb0c01979b9f11b43))
+* **actions:** update GitHub token in release-please workflow file ([19fd990](https://github.com/chimpdev/bencan.net/commit/19fd990f4ae9f0e07b5b5ddbaa3c54e2fafe9232))
+
 ## [1.0.1](https://github.com/chimpdev/bencan.net/compare/v1.0.0...v1.0.1) (2024-11-02)
 
 
