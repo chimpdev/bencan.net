@@ -4,9 +4,21 @@ import cn from '@/utils/cn';
 import Link from 'next/link';
 import { MdArrowOutward } from 'react-icons/md';
 import Gallery from '@/components/gallery';
+import type { StaticImageData } from 'next/image';
+
+type WorkDataType = {
+  role: string;
+  company: string;
+  link?: string;
+  location?: string;
+  description: string;
+  images?: StaticImageData[];
+  start: string;
+  end?: string;
+};
 
 export default function WorkTab() {
-  const data = [
+  const data: WorkDataType[] = [
     {
       role: 'Frontend Developer',
       company: 'Kişilerarası İlişkiler Psikoterapisi Derneği',
@@ -35,7 +47,7 @@ export default function WorkTab() {
   return (
     <div className='mb-24 flex flex-col gap-y-8 border-l-2 border-[rgba(var(--bg-secondary))] pl-6'>
       {data
-        .sort((a, b) => new Date(b.start) - new Date(a.start))
+        .sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime())
         .map((item, index) => {
           const LinkContainer = item.link ? Link : 'div';
 
@@ -50,7 +62,7 @@ export default function WorkTab() {
                 className={cn(
                   item.link && 'text-pretty hover:underline underline-offset-4'
                 )}
-                href={item.link}
+                href={item.link || '#'}
                 target='_blank'
               >
                 {item.role} at {item.company}
@@ -74,7 +86,7 @@ export default function WorkTab() {
                 {item.description}
               </p>
 
-              {item.images?.length > 0 && (
+              {item.images?.length && (
                 <div className='mt-4 flex gap-4'>
                   <Gallery images={item.images} />
                 </div>

@@ -1,13 +1,20 @@
+/* Modified version of https://magicui.design/docs/components/retro-grid */
+
 import cn from '@/utils/cn';
 
-export default function RetroGrid({ className, angle = 65 }){
+type RetroGridProps = {
+  className?: string;
+  angle?: number;
+};
+
+export default function RetroGrid({ className, angle = 65 }: RetroGridProps) {
   return (
     <div
       className={cn(
         'pointer-events-none absolute size-full overflow-hidden opacity-50 [perspective:200px]',
         className
       )}
-      style={{ '--grid-angle': `${angle}deg` }}
+      style={{ '--grid-angle': `${angle}deg` } as React.CSSProperties}
     >
       <div className='absolute inset-0 [transform:rotateX(var(--grid-angle))]'>
         <div

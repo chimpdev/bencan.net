@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/main.css';
 
@@ -7,7 +8,7 @@ const geistSans = localFont({
   weight: '100 900'
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('https://bencan.net'),
   title: {
     template: '%s - bencan.net',
@@ -21,13 +22,11 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://bencan.net',
-    site_name: 'bencan.net',
     images: [
       {
         url: '/og.png',
         width: 960,
-        height: 540,
-        site_name: 'bencan.net'
+        height: 540
       }
     ]
   }
@@ -41,7 +40,7 @@ export const viewport = {
   userScalable: false
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang='en'>
       <body className={`${geistSans.variable} font-geist text-primary antialiased`}>
