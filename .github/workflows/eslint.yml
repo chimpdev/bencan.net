@@ -28,7 +28,6 @@ jobs:
           node-version: 18
           cache-path: /node_modules
           cache-key: "${{hashFiles('pnpm-lock.yaml')}}"
-          project: website
           
       - name: Run lint script
         run: |

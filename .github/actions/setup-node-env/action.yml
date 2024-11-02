@@ -10,9 +10,6 @@ inputs:
   cache-key:
     description: "the key for caching"
     required: true
-  project:
-    description: "the path to project"
-    required: true
 runs:
   using: composite
   steps:
@@ -23,5 +20,5 @@ runs:
       with:
         path: ${{ inputs.cache-path }}
         key: ${{ inputs.cache-key }}
-    - run: pnpm install --frozen-lockfile --prefix ${{ inputs.project }}
+    - run: pnpm install --frozen-lockfile
       shell: bash
