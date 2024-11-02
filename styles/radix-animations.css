@@ -1,0 +1,59 @@
+:root {
+  --tooltip-opacity-start: 0;
+  --tooltip-opacity-end: 1;
+  --tooltip-translate: 8px;
+  --tooltip-animation-duration: 100ms;
+}
+
+@keyframes tooltip-enter {
+  from {
+    opacity: var(--tooltip-opacity-start);
+    transform: var(--tooltip-transform-start);
+  }
+  to {
+    opacity: var(--tooltip-opacity-end);
+    transform: var(--tooltip-transform-end);
+  }
+}
+
+@keyframes tooltip-exit {
+  from {
+    opacity: var(--tooltip-opacity-end);
+    transform: var(--tooltip-transform-end);
+  }
+  to {
+    opacity: var(--tooltip-opacity-start);
+    transform: var(--tooltip-transform-start);
+  }
+}
+
+[data-radix-popper-content-wrapper] [data-state='delayed-open'][data-side='top'] {
+  --tooltip-transform-start: translateY(var(--tooltip-translate));
+  --tooltip-transform-end: translateY(0);
+  animation: tooltip-enter var(--tooltip-animation-duration) ease-out;
+}
+
+[data-radix-popper-content-wrapper] [data-state='delayed-open'][data-side='left'] {
+  --tooltip-transform-start: translateX(calc(-1 * var(--tooltip-translate)));
+  --tooltip-transform-end: translateX(0);
+  animation: tooltip-enter var(--tooltip-animation-duration) ease-out;
+}
+
+[data-radix-popper-content-wrapper] [data-state='delayed-open'][data-side='right'] {
+  --tooltip-transform-start: translateX(var(--tooltip-translate));
+  --tooltip-transform-end: translateX(0);
+  animation: tooltip-enter var(--tooltip-animation-duration) ease-out;
+}
+
+[data-radix-popper-content-wrapper] [data-state='delayed-open'][data-side='bottom'] {
+  --tooltip-transform-start: translateY(calc(-1 * var(--tooltip-translate)));
+  --tooltip-transform-end: translateY(0);
+  animation: tooltip-enter var(--tooltip-animation-duration) ease-out;
+}
+
+[data-radix-popper-content-wrapper] [data-state='closed'][data-side='top'],
+[data-radix-popper-content-wrapper] [data-state='closed'][data-side='left'],
+[data-radix-popper-content-wrapper] [data-state='closed'][data-side='right'],
+[data-radix-popper-content-wrapper] [data-state='closed'][data-side='bottom'] {
+  animation: tooltip-exit var(--tooltip-animation-duration) ease-in;
+}

@@ -1,0 +1,21 @@
+- name: 'Bug'
+  color: 'FF6347'
+  description: Issues related to bugs specifically in the project.
+- name: 'Feature'
+  color: '4682B4'
+  description: Requests or discussions related to new features in the project.
+- name: 'UI/UX'
+  color: 'FFD700'
+  description: Issues concerning user interface or user experience improvements in the project.
+- name: 'Performance'
+  color: '32CD32'
+  description: Discussions or problems regarding performance optimizations in the project.
+- name: 'Internalization'
+  color: 'FF6347'
+  description: Issues related to internationalization or localization of the project.
+- name: 'Invalid'
+  color: '4682B4'
+  description: Issues that are invalid or do not belong to the project.
+- name: 'Duplicate'
+  color: 'FFD700'
+  description: Issues that are duplicates of other issues.

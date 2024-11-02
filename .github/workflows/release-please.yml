@@ -1,0 +1,47 @@
+name: Release Please
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      website--tag_name: ${{ steps.release.outputs.website--tag_name}}
+      website--release_created: ${{ steps.release.outputs.website--release_created}}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  release-website:
+    if: ${{ needs.release-please.outputs.website--release_created }}
+    runs-on: ubuntu-latest
+    needs: release-please
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: ./.github/actions/setup-node-env
+        with:
+          node-version: 18
+          cache-path: /node_modules
+          cache-key: "${{hashFiles('pnpm-lock.yaml')}}"
+          project: website
+      - run: zip -r website.zip website -x "**/node_modules/*"
+      - name: Upload Release Artifact
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ needs.release-please.outputs.website--tag_name }} website.zip
