@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/chimpdev/bencan.net/compare/v1.0.2...v1.0.3) (2024-11-03)
+
+
+### Bug Fixes
+
+* **actions:** revert 19fd990f4ae9f0e07b5b5ddbaa3c54e2fafe9232 ([524a746](https://github.com/chimpdev/bencan.net/commit/524a7463feeb78609344859b039e3e3f9ef60b7e))
+* **actions:** revert 19fd990f4ae9f0e07b5b5ddbaa3c54e2fafe9232 ([40d3ca9](https://github.com/chimpdev/bencan.net/commit/40d3ca9bd4bad308f065fceb95766827f85ffcd9))
+
 ## [1.0.2](https://github.com/chimpdev/bencan.net/compare/v1.0.1...v1.0.2) (2024-11-02)
 
 
