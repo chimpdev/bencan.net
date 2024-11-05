@@ -9,7 +9,7 @@ export default function Works() {
     },
     {
       name: 'Full-stack Developer at barisyasaman.com',
-      link: 'https://github.com/discordplace/lantern',
+      link: 'https://secim.barisyasaman.com',
       description: 'A site that simulates the Turkish elections and displays the results live on the Turkey map, connected to a Discord bot. I used React, SQLite, Tailwind CSS and Express.'
     },
     {
