@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/chimpdev/bencan.net/compare/v1.0.3...v2.0.0) (2024-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* redesign website ([#7](https://github.com/chimpdev/bencan.net/issues/7))
+
+### Features
+
+* add resume.pdf ([3a626bb](https://github.com/chimpdev/bencan.net/commit/3a626bb25bcc8f74b117af74788097b3d09fa192))
+* redesign website ([#7](https://github.com/chimpdev/bencan.net/issues/7)) ([bbf5696](https://github.com/chimpdev/bencan.net/commit/bbf569605134e5dbcc7676ef40098b2e3b967053))
+
 ## [1.0.3](https://github.com/chimpdev/bencan.net/compare/v1.0.2...v1.0.3) (2024-11-03)
 
 
