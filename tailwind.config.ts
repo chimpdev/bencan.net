@@ -1,35 +1,50 @@
 import type { Config } from 'tailwindcss';
 
+import typographPlugin from '@tailwindcss/typography';
+
 export default {
   content: [
     './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}'
+    './app/**/*.{ts,tsx,mdx}',
+    './*.tsx'
   ],
   darkMode: 'media',
   theme: {
     extend: {
       animation: {
-        grid: 'grid 15s linear infinite'
+        marquee: 'marquee var(--duration) linear infinite',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
       },
       keyframes: {
         grid: {
           '0%': { transform: 'translateY(-50%)' },
           '100%': { transform: 'translateY(0)' }
+        },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+        },
+        'marquee-vertical': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' }
         }
       },
       colors: {
         accent: 'rgba(var(--accent-color))'
       },
       fontFamily: {
-        geist: ['var(--font-geist-sans)', 'sans']
+        geist: ['var(--font-geist-sans)', 'sans'],
+        bricolageGrotesque: ['var(--font-bricolage-grotesque)', 'sans']
       },
       screens: {
         mobile: '420px'
       },
-      placeholderColor: {
-        primary: 'rgba(var(--text-placeholder))'
-      },
       textColor: {
+        primary: 'rgba(var(--text-primary))',
+        secondary: 'rgba(var(--text-secondary))',
+        tertiary: 'rgba(var(--text-tertiary))'
+      },
+      textDecorationColor: {
         primary: 'rgba(var(--text-primary))',
         secondary: 'rgba(var(--text-secondary))',
         tertiary: 'rgba(var(--text-tertiary))'
@@ -59,5 +74,6 @@ export default {
   },
   future: {
     hoverOnlyWhenSupported: true
-  }
+  },
+  plugins: [typographPlugin]
 } satisfies Config;

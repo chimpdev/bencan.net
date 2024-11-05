@@ -89,3 +89,7 @@ html, body {
   background-color: rgba(var(--dark-bg-background), 0.85) !important;
   backdrop-filter: blur(5px) !important;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

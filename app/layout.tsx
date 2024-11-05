@@ -8,6 +8,12 @@ const geistSans = localFont({
   weight: '100 900'
 });
 
+const bricolageGrotesque = localFont({
+  src: '../fonts/BricolageGrotesque.ttf',
+  variable: '--font-bricolage-grotesque',
+  weight: '100 900'
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://bencan.net'),
   title: {
@@ -43,8 +49,8 @@ export const viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} font-geist text-primary antialiased`}>
-        <div className='flex h-dvh flex-col'>
+      <body className={`${geistSans.variable} ${bricolageGrotesque.variable} font-geist text-primary antialiased`}>
+        <div className='flex h-dvh flex-col px-6 sm:px-0'>
           {children}
         </div>
       </body>
