@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/chimpdev/bencan.net/compare/v2.0.0...v2.0.1) (2024-11-05)
+
+
+### Bug Fixes
+
+* **works:** update project link for barisyasaman.com ([f084b5c](https://github.com/chimpdev/bencan.net/commit/f084b5c46f6764cf12e82caac91db61f7647c6fa))
+
 ## [2.0.0](https://github.com/chimpdev/bencan.net/compare/v1.0.3...v2.0.0) (2024-11-05)
 
 
