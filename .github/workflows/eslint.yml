@@ -26,7 +26,7 @@ jobs:
       - uses: ./.github/actions/setup-node-env
         with:
           node-version: 18
-          cache-path: /node_modules
+          cache-path: "node_modules"
           cache-key: "${{hashFiles('pnpm-lock.yaml')}}"
           
       - name: Run lint script

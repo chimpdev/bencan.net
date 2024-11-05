@@ -2,3 +2,9 @@ export type ClassValue = ClassArray | ClassDictionary | string | number | bigint
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ClassDictionary = Record<string, any>;
 export type ClassArray = ClassValue[];
+
+declare module 'next' {
+  export interface Metadata {
+    date?: string;
+  }
+}

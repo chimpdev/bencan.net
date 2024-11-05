@@ -1,5 +1,6 @@
 'use client';
 
+import cn from '@/utils/cn';
 import * as RadixTooltip from '@radix-ui/react-tooltip';
 import { useState } from 'react';
 import { useMedia } from 'react-use';
@@ -10,17 +11,20 @@ interface TooltipProps {
   side?: 'top' | 'right' | 'bottom' | 'left';
   sideOffset?: number;
   hide?: boolean;
+  delayDuration?: number;
+  contentClassOverride?: string;
+  disableHoverableContent?: boolean;
 }
 
-export default function Tooltip({ children, content, side, sideOffset, hide }: TooltipProps) {
+export default function Tooltip({ children, content, side, sideOffset, hide, delayDuration, contentClassOverride, disableHoverableContent = true }: TooltipProps) {
   const [open, setOpen] = useState(false);
   const isMobile = useMedia('(max-width: 640px)', false);
 
   return (
     <RadixTooltip.Provider
-      delayDuration={0}
+      delayDuration={delayDuration || 0}
       skipDelayDuration={0}
-      disableHoverableContent={true}
+      disableHoverableContent={disableHoverableContent === true}
     >
       <RadixTooltip.Root
         onOpenChange={newOpenState => !hide && setOpen(newOpenState)}
@@ -40,7 +44,10 @@ export default function Tooltip({ children, content, side, sideOffset, hide }: T
         {content && (
           <RadixTooltip.Portal>
             <RadixTooltip.Content
-              className='z-10 max-w-[calc(100%_-_10px)] rounded-lg bg-black p-2 text-center text-xs font-semibold text-white [transform-origin:var(--radix-tooltip-content-transform-origin)] sm:max-w-[unset] sm:rounded-full sm:px-2 sm:py-1 dark:bg-white dark:text-black'
+              className={cn(
+                'z-10 max-w-[calc(100%_-_10px)] rounded-lg bg-black p-2 text-center text-xs font-semibold text-white [transform-origin:var(--radix-tooltip-content-transform-origin)] sm:max-w-[unset] sm:rounded-full sm:px-2 sm:py-1 dark:bg-white dark:text-black',
+                contentClassOverride
+              )}
               sideOffset={sideOffset || 5}
               side={side || 'top'}
             >
