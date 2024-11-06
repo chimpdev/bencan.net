@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/chimpdev/bencan.net/compare/v2.2.0...v2.2.1) (2024-11-06)
+
+
+### Bug Fixes
+
+* **songs:** move revalidation from fetch to export ([d09879c](https://github.com/chimpdev/bencan.net/commit/d09879c06fa94a54f1433bb0587edbd0d2f70216))
+
 ## [2.2.0](https://github.com/chimpdev/bencan.net/compare/v2.1.0...v2.2.0) (2024-11-06)
 
 
