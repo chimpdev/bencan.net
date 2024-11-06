@@ -1,8 +1,10 @@
-export const metadata = {
+import generateMetadata from '@/utils/generateMetadata';
+
+export const metadata = generateMetadata({
   title: 'Hello from /blogs',
   description: 'My first blog post!',
   date: '2024-05-11'
-}
+});
 
 # {metadata.title}
 
