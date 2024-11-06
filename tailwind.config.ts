@@ -29,9 +29,6 @@ export default {
           to: { transform: 'translateY(calc(-100% - var(--gap)))' }
         }
       },
-      colors: {
-        accent: 'rgba(var(--accent-color))'
-      },
       fontFamily: {
         geist: ['var(--font-geist-sans)', 'sans'],
         bricolageGrotesque: ['var(--font-bricolage-grotesque)', 'sans']
