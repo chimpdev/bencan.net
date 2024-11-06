@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/chimpdev/bencan.net/compare/v2.1.0...v2.2.0) (2024-11-06)
+
+
+### Features
+
+* **spotify:** integrate Spotify API for show recently played tracks ([872610c](https://github.com/chimpdev/bencan.net/commit/872610c7d642c4b55d85e3688c011ee045b69a58))
+
 ## [2.1.0](https://github.com/chimpdev/bencan.net/compare/v2.0.1...v2.1.0) (2024-11-06)
 
 
