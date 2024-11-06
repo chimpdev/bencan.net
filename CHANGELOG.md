@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/chimpdev/bencan.net/compare/v2.0.1...v2.1.0) (2024-11-06)
+
+
+### Features
+
+* **metadata:** implement generateMetadata utility for dynamic metadata generation ([0d9f22f](https://github.com/chimpdev/bencan.net/commit/0d9f22f2051d9380f7db5e63d9c04848dfdd84e9))
+
+
+### Bug Fixes
+
+* **tooltip:** change max width of tooltip content to 320px ([f661ed4](https://github.com/chimpdev/bencan.net/commit/f661ed48d975e5c638fc5dfcdfb829426f3f0209))
+
 ## [2.0.1](https://github.com/chimpdev/bencan.net/compare/v2.0.0...v2.0.1) (2024-11-05)
 
 
