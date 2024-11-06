@@ -2,6 +2,8 @@ import getNewAccessToken from '@/utils/getSpotifyAccessToken';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const revalidate = 3600;
+
 export default async function Songs() {
   if (!process.env.SPOTIFY_CLIENT_ID || !process.env.SPOTIFY_CLIENT_SECRET || !process.env.SPOTIFY_REFRESH_TOKEN) {
     console.warn('Environment variables SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REFRESH_TOKEN are required to render the recently played songs component');
@@ -18,9 +20,6 @@ export default async function Songs() {
   const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=5', {
     headers: {
       Authorization: `Bearer ${accessToken}`
-    },
-    next: {
-      revalidate: 3600
     }
   });
 
