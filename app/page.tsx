@@ -2,6 +2,7 @@ import InlineQuote from '@/components/inline-quote';
 import Projects from '@/components/projects';
 import Works from '@/components/works';
 import Blogs from '@/components/blogs';
+import Songs from '@/components/songs';
 import { Suspense } from 'react';
 import { LuLoader } from 'react-icons/lu';
 
@@ -54,7 +55,7 @@ export default function Page() {
 
       <div className='flex flex-col gap-y-4'>
         <h1 className='font-bricolageGrotesque font-medium text-secondary'>
-          My Blog Posts
+          Blog Posts
         </h1>
 
         <Suspense
@@ -66,6 +67,27 @@ export default function Page() {
           }
         >
           <Blogs />
+        </Suspense>
+      </div>
+
+      <div className='flex flex-col gap-y-4'>
+        <h1 className='font-bricolageGrotesque font-medium text-secondary'>
+          Daily Songs
+        </h1>
+
+        <p className='text-sm text-secondary'>
+          I listen to music while working. View the songs I listened to recently.
+        </p>
+
+        <Suspense
+          fallback={
+            <div className='flex items-center gap-x-2 text-xs text-tertiary'>
+              <LuLoader className='animate-spin' />
+              You want coffee or tea while waiting? 🍵☕
+            </div>
+          }
+        >
+          <Songs />
         </Suspense>
       </div>
 

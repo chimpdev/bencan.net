@@ -37,13 +37,26 @@ cd bencan.net
 pnpm install
 ```
 
-4. Start the server:
+5. Rename the `.env.example` file to `.env` and fill in the configuration values:
+
+```env
+SPOTIFY_CLIENT_ID=
+SPOTIFY_CLIENT_SECRET=
+SPOTIFY_REDIRECT_URL=
+SPOTIFY_REFRESH_TOKEN=
+```
+
+> [!NOTE]
+> - To get the Spotify API credentials, you need to create a Spotify Developer account and create a new application. After creating the application, you will get the client ID and client secret. Don't forget to set the redirect URL to `https://YOUR_DOMAIN/api/spotify/callback` where `YOUR_DOMAIN` is the domain where you are hosting the website.
+> - To get the Spotify refresh token, after you have set the client ID, client secret, and redirect URL, skip this step and start the server. The server will automatically start at `http://localhost:3000`. Visit `http://localhost:3000/api/spotify` and log in with your Spotify account. After logging in, you will be redirected to `http://localhost:3000/api/spotify/callback`. The refresh token will be displayed on the page. Copy the refresh token and paste it in the `.env` file. After pasting the refresh token, restart the server. With this implementation, every 1 hour the server will automatically get a new access token using the refresh token and display your recently played tracks on the website. If you want to get rid of "recently played tracks" functionality, you can just use empty .env file.
+
+6. Start the server:
 
 ```bash
 pnpm start
 ```
 
-5. The server should now be running on `http://localhost:300`.
+5. The server should now be running on `http://localhost:3000`.
 
 ## Contributing
 

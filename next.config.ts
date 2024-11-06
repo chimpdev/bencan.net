@@ -3,11 +3,14 @@ import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
   reactStrictMode: false,
-  pageExtensions: ['tsx', 'mdx'],
+  pageExtensions: ['tsx', 'mdx', 'ts', 'js'],
   images: {
     remotePatterns: [
       {
         hostname: 'images.unsplash.com'
+      },
+      {
+        hostname: 'i.scdn.co'
       }
     ]
   }

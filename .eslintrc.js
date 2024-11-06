@@ -128,7 +128,8 @@ module.exports = {
     ],
     'no-unneeded-ternary': 'error',
     'no-multi-spaces': 'error',
-    'security/detect-object-injection': 'off'
+    'security/detect-object-injection': 'off',
+    'no-var': 'off'
   },
   overrides: [
     {
