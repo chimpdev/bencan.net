@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/chimpdev/bencan.net/compare/v2.2.1...v2.2.2) (2024-11-08)
+
+
+### Bug Fixes
+
+* **config:** remove Unsplash image hostname from remote patterns ([6d645eb](https://github.com/chimpdev/bencan.net/commit/6d645ebeebaeb5c109b2386dc0074f74f6d8e7e7))
+
 ## [2.2.1](https://github.com/chimpdev/bencan.net/compare/v2.2.0...v2.2.1) (2024-11-06)
 
 
