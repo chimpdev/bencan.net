@@ -25,7 +25,7 @@ export default function Page() {
         </h1>
 
         <span className='whitespace-pre-wrap text-sm text-secondary'>
-          I’m a 19-year-old high school student and freelancer from Turkey, passionate about software development and always eager to learn. Currently focusing to learn more about <InlineQuote id='typescript'>TypeScript</InlineQuote> world.
+          I’m a 19-year-old high school student and freelancer from Turkey, passionate about software development and always eager to learn. Currently focusing to learn more about <InlineQuote text='TypeScript is a superset of JavaScript that adds static typing to the language. It’s a powerful tool that helps you catch bugs and improve code quality.'>TypeScript</InlineQuote> world.
         </span>
 
         <h1 className='mt-4 font-bricolageGrotesque font-medium text-secondary'>
@@ -97,7 +97,7 @@ export default function Page() {
         </h1>
 
         <div className='text-sm text-secondary'>
-          I’m generally active on Instagram and <InlineQuote id='my-github'>GitHub</InlineQuote>. You can contact me via <InlineQuote id='my-email'>email</InlineQuote> or DM on <InlineQuote id='my-instagram'>Instagram</InlineQuote>. Also don’t forget to check out my <InlineQuote id='my-resume'>resume</InlineQuote>.
+          I’m generally active on Instagram and <InlineQuote href='https://github.com/chimpdev'>GitHub</InlineQuote>. You can contact me via <InlineQuote href='mailto:skyhancloud@gmail.com'>email</InlineQuote> or DM on <InlineQuote href='https://instagram.com/gokhanknows'>Instagram</InlineQuote>. Also don’t forget to check out my <InlineQuote href='/resume.pdf'>resume</InlineQuote>.
         </div>
       </div>
     </div>
