@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/chimpdev/bencan.net/compare/v2.2.2...v2.3.0) (2024-11-11)
+
+
+### Features
+
+* **InlineQuote:** update options with href and text parameters ([aa41754](https://github.com/chimpdev/bencan.net/commit/aa41754f9adc4a3713fb70d0133cc1bb1d3ebdc0))
+
 ## [2.2.2](https://github.com/chimpdev/bencan.net/compare/v2.2.1...v2.2.2) (2024-11-08)
 
 
