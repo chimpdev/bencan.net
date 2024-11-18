@@ -42,8 +42,8 @@ importers:
         specifier: ^15.0.2
         version: 15.0.2(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
       pnpm:
-        specifier: ^9.12.3
-        version: 9.12.3
+        specifier: ^9.13.2
+        version: 9.13.2
       react:
         specifier: 19.0.0-rc-02c0e824-20241028
         version: 19.0.0-rc-02c0e824-20241028
@@ -2261,8 +2261,8 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  pnpm@9.12.3:
-    resolution: {integrity: sha512-zOD53pxafJW++UQWnMXf6HQav7FFB4wNUIuGgFaEiofIHmJiRstglny9f9KabAYu9z/4QNlrPIbECsks9KgT7g==}
+  pnpm@9.13.2:
+    resolution: {integrity: sha512-iMnDhkRQNQ5lozWHq4Aaz5RtfIFO0RNNpKkk9t9aISD9NrRqq2j3zR1BMUkRLVPH2zpBNmJM/QD/GEagxs70ig==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5424,7 +5424,7 @@ snapshots:
 
   pirates@4.0.6: {}
 
-  pnpm@9.12.3: {}
+  pnpm@9.13.2: {}
 
   possible-typed-array-names@1.0.0: {}
 
