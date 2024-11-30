@@ -46,6 +46,7 @@ export default function Tooltip({ children, content, side, sideOffset, hide, del
             <RadixTooltip.Content
               className={cn(
                 'z-10 max-w-[320px] rounded-lg bg-black p-2 text-center text-xs font-semibold text-white [transform-origin:var(--radix-tooltip-content-transform-origin)] sm:max-w-[unset] sm:rounded-full sm:px-2 sm:py-1 dark:bg-white dark:text-black',
+                disableHoverableContent && 'pointer-events-none',
                 contentClassOverride
               )}
               sideOffset={sideOffset || 5}
