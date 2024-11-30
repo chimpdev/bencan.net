@@ -45,5 +45,7 @@ export default function generateMetadata(metadata: CustomMetadata = {}): Metadat
   if (metadata.keywords) generatedMetadata.keywords = metadata.keywords;
   else generatedMetadata.keywords = ['personal', 'blog', 'portfolio', 'projects'];
 
+  if (metadata.date) generatedMetadata.date = metadata.date;
+
   return generatedMetadata;
 }
