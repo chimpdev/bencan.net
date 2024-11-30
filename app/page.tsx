@@ -3,20 +3,25 @@ import Projects from '@/components/projects';
 import Works from '@/components/works';
 import Blogs from '@/components/blogs';
 import Songs from '@/components/songs';
+import DiscordStatus from '@/components/discord-status';
 import { Suspense } from 'react';
 import { LuLoader } from 'react-icons/lu';
 
 export default function Page() {
   return (
     <div className='mx-auto flex w-full max-w-[600px] flex-col gap-y-24 py-16'>
-      <div className='flex flex-col'>
-        <h1 className='font-bricolageGrotesque font-bold'>
-          Gökhan Bulut
-        </h1>
+      <div className='flex w-full items-center justify-between'>
+        <div className='flex flex-col'>
+          <h1 className='font-bricolageGrotesque font-bold'>
+            Gökhan Bulut
+          </h1>
 
-        <span className='text-sm text-secondary'>
-          Full-stack Developer
-        </span>
+          <span className='text-sm text-secondary'>
+            Full-stack Developer
+          </span>
+        </div>
+
+        <DiscordStatus userId='957840712404193290' />
       </div>
 
       <div className='flex flex-col gap-y-4'>
