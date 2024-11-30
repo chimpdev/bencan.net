@@ -1,0 +1,116 @@
+import generateMetadata from '@/utils/generateMetadata';
+import CodeBlock from '@/components/blogs/code-block';
+import { SiJavascript } from 'react-icons/si';
+
+export const metadata = generateMetadata({
+  title: 'Using lantern.rest to Display Your Discord Presence',
+  description: 'Learn how to showcase your live Discord status and activities on your website with Lantern\'s simple API integration.',
+  date: '2024-12-01'
+});
+
+# {metadata.title}
+
+Ever wanted to showcase your Discord status, current gaming session, or Spotify tracks on your personal website? Enter Lantern, a powerful service that makes it incredibly easy to broadcast your Discord presence in real-time. In this post, we'll explore how Lantern works and how you can integrate it into your projects.
+
+## What is Lantern?
+
+Lantern is a service that broadcasts your Discord presence through both a RESTful API and WebSocket connections. It's designed to be simple to use while offering robust functionality for developers who want to display Discord status information on their websites or applications.
+
+## Key Features
+
+- **Real-time Updates**: Get instant updates about status changes through WebSocket connections
+- **RESTful API**: Simple HTTP endpoints for fetching user data
+- **Spotify Integration**: Display currently playing track (if available on your Discord presence) 
+- **Rich Presence Support**: Show detailed information about games and activities
+- **Key-Value Storage**: Store and retrieve custom data for additional functionality
+- **Ready to Use**: Works out of the box without any deployment needed
+
+## Getting Started
+
+### Using the REST API
+
+The simplest way to get started is by using the REST API. You can fetch a user's presence data with a simple GET request to:
+
+```
+lantern.rest/api/v1/users/:your_id
+```
+
+This endpoint returns comprehensive information about the user, including:
+- Current status (online, idle, etc.)
+- Active platforms (desktop, mobile, web)
+- Current activities
+- Spotify listening data (if available)
+- User metadata
+
+### Real-time Updates with WebSocket
+
+For real-time updates, Lantern provides a WebSocket connection at `wss://lantern.rest/socket`. The WebSocket implementation follows a simple protocol:
+
+1. Connect to the WebSocket endpoint
+2. Receive a hello message with heartbeat interval
+3. Initialize the connection with your user ID
+4. Receive real-time updates about presence changes
+
+## Advanced Features
+
+### Key-Value Storage
+
+Lantern includes a built-in key-value storage system that you can use for:
+- Storing configuration values
+- Managing dynamic data for your website
+- Keeping track of user preferences
+- Temporary data storage
+
+The KV storage system is accessible through both the REST API and WebSocket connections, making it versatile for various use cases.
+
+### Customization Options
+
+When fetching user data, you can customize the response with various parameters:
+- Generate SVG representations of the user's status
+- Choose between light and dark themes
+- Adjust border radius and other visual elements
+- Hide specific components like global name, status, or badges
+- Customize "no activity" messages
+
+## Implementation Example
+
+Here's a simple example of how you might implement real-time Discord presence on your website:
+
+<CodeBlock
+  icon={<SiJavascript />}
+  fileName="index.js"
+  language="javascript"
+>
+{`const ws = new WebSocket('wss://lantern.rest/socket');
+
+  ws.onmessage = event => {
+    const data = JSON.parse(event.data);
+    
+    if (data.op === 1) { // Hello
+      // Set up heartbeat
+      setInterval(() => {
+        ws.send(JSON.stringify({ op: 4 }));
+      }, data.d.heartbeat_interval);
+      
+      // Initialize connection
+      ws.send(JSON.stringify({
+        op: 2,
+        d: { user_id: "YOUR_DISCORD_ID" }
+      }));
+    }
+    
+    if (data.op === 6) { // Presence Update
+      // Update your UI with the new presence data
+    }
+  };`}
+</CodeBlock>
+
+## Self-Hosting Options
+
+While Lantern is ready to use out of the box, you can also self-host it if you need complete control over the infrastructure. The project is open-source and includes detailed documentation for setting up your own instance.
+
+## Conclusion
+
+The combination of real-time WebSocket updates and a straightforward REST API makes it flexible enough for both simple implementations and complex applications. Plus, with the added bonus of key-value storage, you can extend its functionality to suit your specific needs.
+
+Ready to get started? Head over to the [Lantern documentation](https://github.com/discordplace/lantern?tab=readme-ov-file#api-docs) to begin integrating Discord presence into your projects today!
