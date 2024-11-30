@@ -38,7 +38,7 @@ export default async function Songs() {
     .map(({ played_at, track }) => (
       <Link
         href={track.album.external_urls.spotify}
-        key={track.id}
+        key={`${track.id}-${played_at}`}
         className='group relative z-10 flex w-full items-center gap-x-4'
       >
         <div className='absolute left-0 top-0 -z-10 h-[130%] w-[105%] translate-x-[-2.5%] translate-y-[-12%] rounded-xl bg-secondary opacity-0 transition-opacity duration-75 group-hover:opacity-100' />
@@ -48,7 +48,7 @@ export default async function Songs() {
           height={48}
           width={48}
           alt={track.name}
-          className='rounded-lg'
+          className='size-12 rounded-lg'
         />
 
         <div className='flex flex-col'>
