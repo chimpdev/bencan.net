@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.4.0](https://github.com/chimpdev/bencan.net/compare/v2.3.0...v2.4.0) (2024-11-30)
+
+
+### Features
+
+* **blog:** add new blog "using-lantern-rest-to-display-your-discord-presence" ([0a2c919](https://github.com/chimpdev/bencan.net/commit/0a2c9192b6d22d6ccf34b81638a5ac19e93ab687))
+* **discord-status:** add Discord status component to display online/offline status ([3a6c39f](https://github.com/chimpdev/bencan.net/commit/3a6c39f3ff0a1d62456ccc10370d7dfad5bc80f0))
+* **metadata:** add date to generated metadata if provided ([1ae142e](https://github.com/chimpdev/bencan.net/commit/1ae142ec79e4f4925828d2b563e72c2e1fe7f05e))
+
+
+### Bug Fixes
+
+* **songs:** update key prop to include played_at for unique identification ([41114b2](https://github.com/chimpdev/bencan.net/commit/41114b202a4c5bf615abb63319afce575bd6c83d))
+* **tooltip:** add pointer-events-none to content when disableHoverableContent prop specified ([f0ff41e](https://github.com/chimpdev/bencan.net/commit/f0ff41e93c9f2493b81950cda52251a75c3619ab))
+
 ## [2.3.0](https://github.com/chimpdev/bencan.net/compare/v2.2.2...v2.3.0) (2024-11-11)
 
 
