@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { Metadata } from 'next/types';
 import fs from 'node:fs';
 import React from 'react';

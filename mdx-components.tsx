@@ -1,5 +1,5 @@
 import cn from '@/utils/cn';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import type { MDXComponents } from 'mdx/types';
 import { RiLink } from 'react-icons/ri';
 import { MdArrowOutward } from 'react-icons/md';

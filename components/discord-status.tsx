@@ -3,7 +3,7 @@
 import cn from '@/utils/cn';
 import { useEffect, useState } from 'react';
 import Tooltip from '@/components/tooltip';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import type { LanternSpotify } from '@/types';
 import Image from 'next/image';
 

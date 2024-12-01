@@ -1,7 +1,7 @@
 'use client';
 
 import Tooltip from '@/components/tooltip';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 interface InlineQuoteProps {
   children: React.ReactNode,
