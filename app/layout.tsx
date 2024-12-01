@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import '@/styles/main.css';
 import generateMetadata from '@/utils/generateMetadata';
+import { ViewTransitions } from 'next-view-transitions';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -26,12 +27,14 @@ export const viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang='en'>
-      <body className={`${geistSans.variable} ${bricolageGrotesque.variable} font-geist text-primary antialiased`}>
-        <div className='flex h-dvh flex-col px-6 sm:px-0'>
-          {children}
-        </div>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang='en'>
+        <body className={`${geistSans.variable} ${bricolageGrotesque.variable} font-geist text-primary antialiased`}>
+          <div className='flex h-dvh flex-col px-6 sm:px-0'>
+            {children}
+          </div>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
