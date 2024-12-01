@@ -45,7 +45,10 @@ export default function DiscordStatus({ userId }: DiscordStatusProps) {
       content='Discord status powered by lantern.rest'
       side='bottom'
     >
-      <div className='flex cursor-pointer flex-col items-end transition-opacity hover:opacity-70'>
+      <Link
+        className='flex cursor-pointer flex-col items-end transition-opacity hover:opacity-70'
+        href='https://lantern.rest'
+      >
         {!isOffline && spotify && (
           <div className='hidden items-center gap-x-2 sm:flex'>
             <Image
@@ -68,10 +71,7 @@ export default function DiscordStatus({ userId }: DiscordStatusProps) {
           </div>
         )}
 
-        <Link
-          className='flex select-none items-center gap-x-2 text-xs font-medium text-tertiary'
-          href={'https://lantern.rest'}
-        >
+        <div className='flex select-none items-center gap-x-2 text-xs font-medium text-tertiary'>
           <div
             className={cn(
               'relative size-2 rounded-full',
@@ -83,8 +83,8 @@ export default function DiscordStatus({ userId }: DiscordStatusProps) {
           </div>
 
           {isOffline ? 'Offline' : 'Online'}
-        </Link>
-      </div>
+        </div>
+      </Link>
     </Tooltip>
   );
 }
