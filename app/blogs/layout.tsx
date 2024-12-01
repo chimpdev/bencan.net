@@ -1,12 +1,14 @@
 'use client';
 
 import cn from '@/utils/cn';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function BlogLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const router = useRouter();
+
+  const [title, setTitle] = useState(document.title);
 
   useEffect(() => {
     const headings = document.querySelectorAll('h2, h3, h4, h5, h6');
@@ -45,6 +47,8 @@ export default function BlogLayout({ children }: Readonly<{ children: React.Reac
         });
       }
     }
+
+    setTitle(document.title);
   }, []);
 
   return (
@@ -54,11 +58,11 @@ export default function BlogLayout({ children }: Readonly<{ children: React.Reac
         href='/'
       >
         <h1 className='font-bricolageGrotesque font-bold'>
-          Gökhan Bulut
+          {title.split(' - ').shift()}
         </h1>
 
-        <span className='text-sm text-secondary'>
-          Full-stack Developer
+        <span className='text-sm text-tertiary'>
+          Gökhan Bulut
         </span>
       </Link>
 
