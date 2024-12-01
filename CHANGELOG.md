@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.6.0](https://github.com/chimpdev/bencan.net/compare/v2.5.0...v2.6.0) (2024-12-01)
+
+
+### Features
+
+* **dependencies:** add 'next-view-transitions' package ([97a865e](https://github.com/chimpdev/bencan.net/commit/97a865eeb1dd53ad6d6394b2e9c47ff22dad4a9c))
+* **layout:** wrap RootLayout in ViewTransitions to add page transitions ([8d3cb46](https://github.com/chimpdev/bencan.net/commit/8d3cb4664d3106cb94d20580a3e420e0d6013ae2))
+
+
+### Bug Fixes
+
+* **discord-status:** refactor link structure ([a3e5de8](https://github.com/chimpdev/bencan.net/commit/a3e5de88321907a5d394fbcd06d1cbfd9fdbfba9))
+
 ## [2.5.0](https://github.com/chimpdev/bencan.net/compare/v2.4.0...v2.5.0) (2024-12-01)
 
 
