@@ -16,3 +16,23 @@ export type SpotifyTokenResponse = {
   expires_in: number;
   refresh_token: string;
 };
+
+export type LanternSpotify = {
+  track_id: string;
+  song: string;
+  artist: string | string[];
+  album: string;
+  album_cover: string;
+  start_time: {
+    unix: number;
+    raw: string;
+  },
+  end_time: {
+    unix: number;
+    raw: string;
+  },
+  time: {
+    current_human_readable: string;
+    total_human_readable: string;
+  }
+}
