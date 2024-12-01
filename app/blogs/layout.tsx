@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 export default function BlogLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const router = useRouter();
 
-  const [title, setTitle] = useState(document.title);
+  const [title, setTitle] = useState('');
 
   useEffect(() => {
     const headings = document.querySelectorAll('h2, h3, h4, h5, h6');
@@ -58,7 +58,7 @@ export default function BlogLayout({ children }: Readonly<{ children: React.Reac
         href='/'
       >
         <h1 className='font-bricolageGrotesque font-bold'>
-          {title.split(' - ').shift()}
+          {title === '' ? 'bencan.net' : title.split(' - ').shift()}
         </h1>
 
         <span className='text-sm text-tertiary'>
