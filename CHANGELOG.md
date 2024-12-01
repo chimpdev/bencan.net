@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/chimpdev/bencan.net/compare/v2.4.0...v2.5.0) (2024-12-01)
+
+
+### Features
+
+* **discord-status:** enhance Discord status component to display Spotify listening information ([e363f43](https://github.com/chimpdev/bencan.net/commit/e363f435ba2c447e36e8c558b3f1140c418bc6e7))
+
 ## [2.4.0](https://github.com/chimpdev/bencan.net/compare/v2.3.0...v2.4.0) (2024-11-30)
 
 
