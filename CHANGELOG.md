@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/chimpdev/bencan.net/compare/v2.6.0...v2.6.1) (2024-12-01)
+
+
+### Bug Fixes
+
+* **blog:** initialize title state as an empty string ([9962ff9](https://github.com/chimpdev/bencan.net/commit/9962ff9f7aa2bf6e60c95f150f3566c8890aab3e))
+
 ## [2.6.0](https://github.com/chimpdev/bencan.net/compare/v2.5.0...v2.6.0) (2024-12-01)
 
 
