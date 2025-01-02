@@ -10,6 +10,14 @@ const nextConfig: NextConfig = {
         hostname: 'i.scdn.co'
       }
     ]
+  },
+  webpack: config => {
+    config.module.rules.push({
+      test: /\.node/,
+      use: 'node-loader'
+    });
+
+    return config;
   }
 };
 
