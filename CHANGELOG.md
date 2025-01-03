@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.7.0](https://github.com/chimpdev/bencan.net/compare/v2.6.0...v2.7.0) (2025-01-03)
+
+
+### Features
+
+* **discord:** integrate Discord bot functionality and update environment variables ([815fdc2](https://github.com/chimpdev/bencan.net/commit/815fdc224d3e69ec79fda5de5571e355082e75bd))
+
+
+### Bug Fixes
+
+* **blog:** initialize title state as an empty string ([9962ff9](https://github.com/chimpdev/bencan.net/commit/9962ff9f7aa2bf6e60c95f150f3566c8890aab3e))
+
+
+### Reverts
+
+* "feat(discord): integrate Discord bot functionality and update environment variables" ([b1518ae](https://github.com/chimpdev/bencan.net/commit/b1518ae1210e802afc894d03a8a6eb9be6c803f9))
+
 ## [2.6.0](https://github.com/chimpdev/bencan.net/compare/v2.5.0...v2.6.0) (2024-12-01)
 
 
