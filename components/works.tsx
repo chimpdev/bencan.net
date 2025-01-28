@@ -15,6 +15,11 @@ export default function Works() {
     {
       name: 'Discord Bots',
       description: 'I have developed many Discord bots for various servers that used by thousands of users. Working with Discord.js and MongoDB.'
+    },
+    {
+      name: 'Bark.js',
+      link: 'https://github.com/chimpdev/bark.js',
+      description: 'Bark.js is a simple JavaScript library for sending custom notifications to your iPhone using the bark.day.app iOS App.'
     }
   ];
 
