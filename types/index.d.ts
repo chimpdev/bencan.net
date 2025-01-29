@@ -36,3 +36,32 @@ export type LanternSpotify = {
     total_human_readable: string;
   }
 }
+
+export type BaseUserType = {
+  metadata: {
+    id: string;
+    username: string;
+    discriminator: string;
+    global_name: string | null;
+    avatar: string | null;
+    avatar_url: string | null;
+    display_avatar_url: string;
+    bot: boolean;
+    flags: {
+      human_readable: string[];
+      bitfield: number | null | undefined;
+    };
+    monitoring_since: {
+      unix: number | null;
+      raw: Date | null;
+    };
+  };
+  active_platforms: ClientPresenceStatusData;
+  activities: (CustomStatusActivity | OtherActivity)[];
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  storage: Map<string, string> | {};
+};
+
+export type LanternUserResponse =
+  | (BaseUserType & { status: 'offline'; last_seen_at: { unix: number; raw: Date } })
+  | (BaseUserType & { status: Exclude<string, 'offline'>; last_seen_at: { unix: number; raw: Date } });

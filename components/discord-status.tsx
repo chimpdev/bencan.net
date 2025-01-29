@@ -4,8 +4,9 @@ import cn from '@/utils/cn';
 import { useEffect, useState } from 'react';
 import Tooltip from '@/components/tooltip';
 import { Link } from 'next-view-transitions';
-import type { LanternSpotify } from '@/types';
+import type { LanternSpotify, LanternUserResponse } from '@/types';
 import Image from 'next/image';
+import getRelativeTime from '@/utils/getRelativeTime';
 
 type DiscordStatusProps = {
   userId: string;
@@ -16,6 +17,7 @@ export default function DiscordStatus({ userId }: DiscordStatusProps) {
 
   const [status, setStatus] = useState<Status>('loading');
   const [spotify, setSpotify] = useState<LanternSpotify | null>(null);
+  const [lastSeenAt, setLastSeenAt] = useState<number | null>(null);
 
   useEffect(() => {
     async function getData() {
@@ -23,11 +25,16 @@ export default function DiscordStatus({ userId }: DiscordStatusProps) {
         const response = await fetch(`https://lantern.rest/api/v1/users/${userId}`);
         if (!response.ok) throw new Error('Failed to fetch status');
 
-        const data = await response.json();
+        const data: LanternUserResponse = await response.json();
 
-        setStatus(data.status === 'offline' ? 'offline' : 'online');
+        if (data.status === 'offline') {
+          setStatus('offline');
+          setLastSeenAt(data.last_seen_at.unix);
+        } else {
+          setStatus('online');
 
-        if (data.active_platforms.spotify !== null) setSpotify(data.active_platforms.spotify);
+          if (data.active_platforms.spotify !== null) setSpotify(data.active_platforms.spotify);
+        }
       } catch (error) {
         console.error(`Something went wrong: ${error}`);
 
@@ -68,6 +75,12 @@ export default function DiscordStatus({ userId }: DiscordStatusProps) {
 
               {Array.isArray(spotify.artist) ? spotify.artist.join(', ') : spotify.artist}
             </div>
+          </div>
+        )}
+
+        {isOffline && lastSeenAt && (
+          <div className='flex items-center gap-x-1 text-xs text-tertiary'>
+            Last seen <span className='text-secondary'>{getRelativeTime(lastSeenAt)}</span>
           </div>
         )}
 
