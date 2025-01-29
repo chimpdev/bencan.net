@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         hostname: 'i.scdn.co'
+      },
+      {
+        hostname: 'i.imgur.com'
       }
     ]
   }
