@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.7.0](https://github.com/chimpdev/bencan.net/compare/v2.6.0...v2.7.0) (2025-02-12)
+
+
+### Features
+
+* **blog:** add blog post "Unlocking the Potential of iOS Notifications with Bark.js" ([dc2c041](https://github.com/chimpdev/bencan.net/commit/dc2c04140551bebfb61e09a141caa75b6ca67d67))
+* **config:** add imgur.com to remote patterns ([5028f35](https://github.com/chimpdev/bencan.net/commit/5028f3592954c3c5bf6c54da0ebea5e9a35010cf))
+* **discord:** enhance user status display with last seen time and update types ([85e4e62](https://github.com/chimpdev/bencan.net/commit/85e4e629e7b4414db2ed1f2e047a16beb50e263f))
+* **discord:** integrate Discord bot functionality and update environment variables ([815fdc2](https://github.com/chimpdev/bencan.net/commit/815fdc224d3e69ec79fda5de5571e355082e75bd))
+* **workflow:** enhance build and deploy process with SSH setup and notifications ([70f7cf4](https://github.com/chimpdev/bencan.net/commit/70f7cf45d3bfb8de2dfd5b7710c2dff309242694))
+* **works:** add Bark.js project to the works list with description and link ([f2cdff3](https://github.com/chimpdev/bencan.net/commit/f2cdff3cb4bbd1fa6b2464ff3834b3073e9d89d5))
+
+
+### Bug Fixes
+
+* **blog:** initialize title state as an empty string ([9962ff9](https://github.com/chimpdev/bencan.net/commit/9962ff9f7aa2bf6e60c95f150f3566c8890aab3e))
+* **blog:** update code block to use TypeScript instead of JavaScript ([d27eec4](https://github.com/chimpdev/bencan.net/commit/d27eec453db867e0d53a258e3f8d49171fbf12ed))
+* **workflow:** update SSH deployment script to use correct project directory ([fd8e666](https://github.com/chimpdev/bencan.net/commit/fd8e666dfa786da33799584efaceb9ff28eab2f8))
+
+
+### Reverts
+
+* "feat(discord): integrate Discord bot functionality and update environment variables" ([b1518ae](https://github.com/chimpdev/bencan.net/commit/b1518ae1210e802afc894d03a8a6eb9be6c803f9))
+
 ## [2.6.0](https://github.com/chimpdev/bencan.net/compare/v2.5.0...v2.6.0) (2024-12-01)
 
 
