@@ -29,11 +29,11 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           ssh -T -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" << 'EOF' > /dev/null 2>&1
-            cd lantern
+            cd bencan.net
             git pull origin main > /dev/null 2>&1
             npm install > /dev/null 2>&1
             npm run build > /dev/null 2>&1
-            pm2 restart lantern > /dev/null 2>&1
+            pm2 restart bencan.net > /dev/null 2>&1
           EOF
 
       - uses: chimpdev/bark-github-action@v1.0.1
