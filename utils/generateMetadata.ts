@@ -15,12 +15,12 @@ type CustomMetadata = {
  */
 export default function generateMetadata(metadata: CustomMetadata = {}): Metadata {
   const generatedMetadata: Metadata = {
-    metadataBase: new URL('https://bencan.net'),
+    metadataBase: new URL('https://skyhan.cloud'),
     openGraph: {
-      title: 'bencan.net',
+      title: 'skyhan.cloud',
       type: 'website',
       locale: 'en_US',
-      url: 'https://bencan.net',
+      url: 'https://skyhan.cloud',
       images: [
         {
           url: '/og.png',
@@ -31,8 +31,8 @@ export default function generateMetadata(metadata: CustomMetadata = {}): Metadat
     }
   };
 
-  if (metadata.title) generatedMetadata.title = `${metadata.title} - bencan.net`;
-  else generatedMetadata.title = 'bencan.net';
+  if (metadata.title) generatedMetadata.title = `${metadata.title} - skyhan.cloud`;
+  else generatedMetadata.title = 'skyhan.cloud';
 
   if (metadata.description) {
     generatedMetadata.description = metadata.description;

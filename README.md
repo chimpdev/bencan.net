@@ -1,6 +1,6 @@
-# bencan.net
+# skyhan.cloud
 
-This is the source code for my personal website, [bencan.net](https://bencan.net). Built with Next.js and Tailwind CSS. 
+This is the source code for my personal website, [skyhan.cloud](https://skyhan.cloud). Built with Next.js and Tailwind CSS. 
 
 ## Table of Contents
 
@@ -22,13 +22,13 @@ Once you have the prerequisites installed, follow these steps to self-host Lante
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/chimpdev/bencan.net.git
+git clone https://github.com/chimpdev/skyhan.cloud.git
 ```
 
 2. Navigate to the cloned repository:
 
 ```bash
-cd bencan.net
+cd skyhan.cloud
 ```
 
 3. Install the required dependencies:
@@ -72,7 +72,7 @@ Please make sure to follow the [Code of Conduct](.github/CODE_OF_CONDUCT.md) and
 
 ## Help
 
-If you encounter any issues with the project or have any questions, feel free to [open an issue](https://github.com/chimpdev/bencan.net/issues) on this repository. I am always happy to help!
+If you encounter any issues with the project or have any questions, feel free to [open an issue](https://github.com/chimpdev/skyhan.cloud/issues) on this repository. I am always happy to help!
 
 ## License
 
@@ -80,10 +80,10 @@ This project is licensed under [the GNU General Public License v3.0](LICENSE).
 
 ## Star History
 
-<a href="https://star-history.com/#chimpdev/bencan.net&Date">
+<a href="https://star-history.com/#chimpdev/skyhan.cloud&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chimpdev/bencan.net&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chimpdev/bencan.net&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chimpdev/bencan.net&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chimpdev/skyhan.cloud&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chimpdev/skyhan.cloud&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chimpdev/skyhan.cloud&type=Date" />
  </picture>
 </a>

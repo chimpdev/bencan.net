@@ -58,7 +58,7 @@ export default function BlogLayout({ children }: Readonly<{ children: React.Reac
         href='/'
       >
         <h1 className='font-bricolageGrotesque font-bold'>
-          {title === '' ? 'bencan.net' : title.split(' - ').shift()}
+          {title === '' ? 'skyhan.cloud' : title.split(' - ').shift()}
         </h1>
 
         <span className='text-sm text-tertiary'>

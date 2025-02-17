@@ -4,7 +4,7 @@ We welcome contributions to the project! To ensure smooth collaboration, please 
 
 ## Reporting Issues
 
-If you encounter any bugs, unexpected behavior, or have suggestions for improvements, please open an issue on our [GitHub repository](https://github.com/chimpdev/bencan.net/issues) with a clear description of the problem or feature request. Make sure to include any relevant details, such as error messages, screenshots, or steps to reproduce the issue.
+If you encounter any bugs, unexpected behavior, or have suggestions for improvements, please open an issue on our [GitHub repository](https://github.com/chimpdev/skyhan.cloud/issues) with a clear description of the problem or feature request. Make sure to include any relevant details, such as error messages, screenshots, or steps to reproduce the issue.
 
 ## Pull Requests
 

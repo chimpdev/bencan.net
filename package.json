@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "bencan.net",
+  "name": "skyhan.cloud",
   "private": true,
   "version": "2.7.0",
   "scripts": {
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/chimpdev/bencan.net"
+    "url": "https://github.com/chimpdev/skyhan.cloud"
   },
   "bugs": {
-    "url": "https://github.com/chimpdev/bencan.net/issues"
+    "url": "https://github.com/chimpdev/skyhan.cloud/issues"
   },
   "license": "GPL-3.0-only",
   "description": "",
